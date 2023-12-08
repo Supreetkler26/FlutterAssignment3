@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 
+// this is our main app widget
 void main() {
   runApp(MyApp());
 }
@@ -46,6 +47,8 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
+
+// this is bottom router widget
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,6 +100,7 @@ class GreetingPage extends StatelessWidget {
     return Color.fromRGBO(55, 45, 85, 1.0);
   }
 
+//this is welcoming page widget
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -128,6 +132,7 @@ class CalculatorPage extends StatefulWidget {
   _CalculatorPageState createState() => _CalculatorPageState();
 }
 
+//this is calculator widget
 class _CalculatorPageState extends State<CalculatorPage> {
   // Function to blend two colors
   Color blendColors(Color color1, Color color2) {
@@ -242,6 +247,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
   }
 }
 
+//this is to fetch API data
 class ApiPage extends StatefulWidget {
   @override
   _ApiPageState createState() => _ApiPageState();
