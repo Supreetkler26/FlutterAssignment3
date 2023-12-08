@@ -262,7 +262,7 @@ class _ApiPageState extends State<ApiPage> {
             onPressed: () {
               fetchApiData();
             },
-            child: Text('Fetch API Data'),
+            child: Text("Fetch Georgian College's programs"),
           ),
           SizedBox(height: 20),
           Expanded(
@@ -286,7 +286,7 @@ class _ApiPageState extends State<ApiPage> {
   void fetchApiData() async {
     try {
       Response response =
-          await dio.get('https://jsonplaceholder.typicode.com/posts');
+          await dio.get('https://mocki.io/v1/64dd27c0-b65a-480f-baca-23ae79728cec');
       List<dynamic> data = response.data; // Use response.data directly
 
       setState(() {
@@ -317,17 +317,17 @@ class PostCard extends StatelessWidget {
       child: ListTile(
         title: Text(
           title.isNotEmpty ? title : 'No data',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Body: ${body.isNotEmpty ? body : 'No data'}',
+              'Program details: ${body.isNotEmpty ? body : 'No data'}',
               style: TextStyle(color: Colors.white),
             ),
             Text(
-              'User ID: $userId',
+              'program ID: $userId',
               style: TextStyle(color: Colors.white),
             ),
           ],
